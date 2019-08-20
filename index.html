@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transportation Survey</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Quiz Time!</h2>
+      </div>
+      <form id="coding_survey">
+        <div class="form-group">
+          <p>What languages are you excited to learn?</p>
+          <input type="checkbox" name="languages" value="html">HTML<br>
+          <input type="checkbox" name="languages" value="css">CSS<br>
+          <input type="checkbox" name="languages" value="javascript">Javascript<br>
+          <input type="checkbox" name="languages" value="um">Um, language?<br>
+        </div>
+        <div class="form-group">
+          <p>What are your plans with your new skills?</p>
+          <input type="checkbox" name="plans" value="job">A sick new job.<br>
+          <input type="checkbox" name="plans" value="website">Personal Website<br>
+          <input type="checkbox" name="plans" value="games">Makin Games<br>
+          <input type="checkbox" name="plans" value="learn">I just love to learn new things.<br>
+        </div>
+        <div class="form-group">
+          <p>What is your previous coding experience level?</p>
+          <input type="checkbox" name="experience" value="none">None<br>
+          <input type="checkbox" name="experience" value="little">Very little HTML<br>
+          <input type="checkbox" name="experience" value="some">Some<br>
+          <input type="checkbox" name="experience" value="more">More<br>
+          <input type="checkbox" name="experience" value="expert">I am an expert<br>
+        </div>
+       <button type="submit">Submit Survey</button>
+      </form>
+      <span id="responses">
+        <p></p>
+      </span>
+    </div>
+  </body>
+</html>
