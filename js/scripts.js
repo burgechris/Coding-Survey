@@ -1,10 +1,14 @@
 $(document).ready(function(){
-  $('form').submit(function(event){
+  $('#coding_survey').submit(function(event){
     $('#coding_survey').hide();
     var results = getIt('languages');
-    results.concat(getIt('plans'));
-    results.concat(getIt('experience'));
-
+    results = results.concat(getIt('plans'));
+    results = results.concat(getIt('experience'));
+    event.preventDefault();
+    $('#responses').show();
+    results.forEach(function(currentValue){
+      $('#responses p').append(currentValue + '<br>');
+    });
   });
 
 
@@ -12,8 +16,9 @@ $(document).ready(function(){
 
 function getIt(sectionName){
   var sectionNameResults = [];
-  $(`input:checkbox[name=[${sectionName}]:checked`).each(function(){
-  sectionNameResults.push($(this).val());
+  $(`input:checkbox[name=${sectionName}]:checked`).each(function(){
+  var sectionValue = $(this).val();
+  sectionNameResults.push(sectionValue);
   });
   return sectionNameResults;
 }
